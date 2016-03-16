@@ -3,7 +3,8 @@ const http = require('http');
 const url = require('url');
 const fs = require('fs');
 
-const PORT = 80;
+var PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var IP = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 const handler = (req, res) => {
   let reqUrl = req.url;
   let method = req.method.toLowerCase();
@@ -24,4 +25,4 @@ const handler = (req, res) => {
   }
 }
 
-http.createServer(handler).listen(PORT);
+http.createServer(handler).listen(PORT, IP);
