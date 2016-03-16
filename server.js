@@ -3,7 +3,7 @@ const http = require('http');
 const url = require('url');
 const fs = require('fs');
 
-const PORT = 3030;
+const PORT = 80;
 const handler = (req, res) => {
   let reqUrl = req.url;
   let method = req.method.toLowerCase();
