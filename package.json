@@ -1,0 +1,25 @@
+{
+  "name": "test-deploy",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergiiKudriashov/test-deploy.git"
+  },
+  "keywords": [
+    "test",
+    "deploy",
+    "nodejs"
+  ],
+  "author": "Sergii_Kudriashov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SergiiKudriashov/test-deploy/issues"
+  },
+  "homepage": "https://github.com/SergiiKudriashov/test-deploy#readme"
+}
