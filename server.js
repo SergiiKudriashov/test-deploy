@@ -16,8 +16,22 @@ const handler = (req, res) => {
         res.end();
     });
   }
-  if (reqUrl == '/not' && method == 'get') {
-    fs.readFile('./views/not.html',function (err, data){
+  if (reqUrl == '/important' && method == 'get') {
+    fs.readFile('./views/important.html',function (err, data){
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        res.write(data);
+        res.end();
+    });
+  }
+  if (reqUrl == '/sale' && method == 'get') {
+    fs.readFile('./views/sale.html',function (err, data){
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        res.write(data);
+        res.end();
+    });
+  }
+  if (reqUrl == '/contacts' && method == 'get') {
+    fs.readFile('./views/contacts.html',function (err, data){
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.write(data);
         res.end();
