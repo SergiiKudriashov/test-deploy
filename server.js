@@ -3,17 +3,10 @@ const http = require('http');
 const url = require('url');
 const fs = require('fs');
 
-const PORT = 80;
+const PORT = 8080;
 const handler = (req, res) => {
   let reqUrl = req.url;
   let method = req.method.toLowerCase();
-  if (url === '/favicon.ico') {
-    res.writeHead(200, {
-      'Content-Type': 'image/x-icon'
-    });
-    res.end();
-    return;
-  }
 
   if (reqUrl == '/' && method == 'get') {
     fs.readFile('./views/home.html',function (err, data){
